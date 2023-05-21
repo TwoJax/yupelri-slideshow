@@ -4,7 +4,7 @@
       <h1 class="pt-6">Health-related quality of life (HRQoL) with once-daily YUPELRI</h1>
     </page-header>
 
-    <main class="flex bg-white border-b-[60px] border-brand-green pt-10 pb-32">
+    <main class="flex bg-white border-b-[60px] border-brand-green pt-10 pb-[120px]">
       <div class="flex-col">
         <div class="pl-32 pr-8 w-[1100px]">
           <p>
@@ -41,6 +41,18 @@
 
         <span class="block pl-32 my-8 text-sm text-gray-500">* The SGRQ responder rate was defined as an improvement in score of 4 or more as threshold.</span>
       </div>
+
+      <router-link to="/concomitant-use">
+        <svg class="absolute left-[70px] top-[507px] text-[#cde3f1] h-[66px] w-auto z-50" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+        </svg>
+      </router-link>
+
+      <router-link to="/safety-profile">
+        <svg class="absolute right-[465px] top-[507px] text-[#cde3f1] h-[66px] w-auto z-50" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+        </svg>
+      </router-link>
     </main>
 
     <safety-information />

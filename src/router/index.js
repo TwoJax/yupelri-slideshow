@@ -5,6 +5,7 @@ import HomeView from '../views/HomeView.vue';
 import TwentyFourHourEfficacyView from '../views/TwentyFourHourEfficacyView.vue';
 import TwelveWeekEfficacyView from '../views/TwelveWeekEfficacyView.vue';
 import QualityOfLifeView from '../views/QualityOfLifeView.vue';
+import SafetyProfileView from '../views/SafetyProfileView.vue';
 
 const routes = [
   {
@@ -27,6 +28,10 @@ const routes = [
   {
     path: '/quality-of-life',
     component: QualityOfLifeView,
+  },
+  {
+    path: '/safety-profile',
+    component: SafetyProfileView,
   },
 ];
 

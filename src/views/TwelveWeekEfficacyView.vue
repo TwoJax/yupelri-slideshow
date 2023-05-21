@@ -4,7 +4,7 @@
       <h1 class="pt-6">YUPELRI delivers consistent control* over 12 weeks</h1>
     </page-header>
 
-    <main class="flex bg-white border-b-[60px] border-brand-green pt-10 pb-16 lg:pr-[500px]">
+    <main class="flex bg-white border-b-[60px] border-brand-green pt-10 pb-[64px] lg:pr-[500px]">
       <div class="flex">
         <div class="pl-32 pr-8">
           <header class="bg-gradient-to-r from-brand-blue from-80% to-[#c1a0cb] font-semibold pl-6 py-6 text-xl text-white my-6">
@@ -61,6 +61,18 @@
           </div>
         </div>
       </div>
+
+      <router-link to="/24-hour-efficacy-data">
+        <svg class="absolute left-[70px] top-[507px] text-[#cde3f1] h-[66px] w-auto z-50" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+        </svg>
+      </router-link>
+
+      <router-link to="/concomitant-use">
+        <svg class="absolute right-[465px] top-[507px] text-[#cde3f1] h-[66px] w-auto z-50" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+        </svg>
+      </router-link>
     </main>
 
     <safety-information />

@@ -44,10 +44,12 @@
         </div>
 
         <div class="flex justify-center">
-          <a class="flex items-center justify-center bg-brand-green rounded-full py-1.5 px-8 font-light text-2xl text-white w-[600px] shadow-[1px_2px_3px_1px_rgba(0,0,0,0.3)] relative">
+          <router-link to="/safety-profile">
+            <a class="flex items-center justify-center bg-brand-green rounded-full py-1.5 px-8 font-light text-2xl text-white w-[600px] shadow-[1px_2px_3px_1px_rgba(0,0,0,0.3)] relative">
             The safety profile of YUPELRI<br> in 3 clinical studies
             <img src="../assets/images/click-icon-white.svg" alt="Click icon" class="h-8 absolute top-6 right-8" />
           </a>
+          </router-link>
         </div>
       </div>
     </div>
