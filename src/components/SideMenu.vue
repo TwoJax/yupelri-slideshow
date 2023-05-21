@@ -9,13 +9,5 @@
 <script>
 export default {
   name: 'SideMenu',
-
-  props: {
-    items: {
-      default: () => {},
-      type: Object,
-      required: true,
-    },
-  },
 };
 </script>

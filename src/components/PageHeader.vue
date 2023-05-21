@@ -13,8 +13,3 @@ export default {
   name: 'PageHeader',
 };
 </script>
-
-<style scoped>
-  .logo {
-  }
-</style>

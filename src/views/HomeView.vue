@@ -19,22 +19,28 @@
             </a>
           </router-link>
 
-          <a class="flex items-center justify-between bg-brand-green rounded-full py-6 px-8 font-light text-2xl text-white w-[600px] shadow-[1px_2px_3px_1px_rgba(0,0,0,0.3)]">
-            YUPELRI 12-week efficacy data
-            <img src="../assets/images/click-icon-white.svg" alt="Click icon" class="h-8" />
-          </a>
+          <router-link to="/12-week-efficacy-data">
+            <a class="flex items-center justify-between bg-brand-green rounded-full py-6 px-8 font-light text-2xl text-white w-[600px] shadow-[1px_2px_3px_1px_rgba(0,0,0,0.3)]">
+              YUPELRI 12-week efficacy data
+              <img src="../assets/images/click-icon-white.svg" alt="Click icon" class="h-8" />
+            </a>
+          </router-link>
         </div>
 
         <div class="flex justify-center space-x-20 mt-5 mb-10">
-          <a class="flex items-center justify-between bg-brand-green rounded-full py-1.5 px-8 font-light text-2xl text-white w-[600px] shadow-[1px_2px_3px_1px_rgba(0,0,0,0.3)] leading-7">
-            YUPELRI efficacy data in concomitant<br> use with other treatments
-            <img src="../assets/images/click-icon-white.svg" alt="Click icon" class="h-8" />
-          </a>
+          <router-link to="/concomitant-use">
+            <a class="flex items-center justify-between bg-brand-green rounded-full py-1.5 px-8 font-light text-2xl text-white w-[600px] shadow-[1px_2px_3px_1px_rgba(0,0,0,0.3)] leading-7">
+              YUPELRI efficacy data in concomitant<br> use with other treatments
+              <img src="../assets/images/click-icon-white.svg" alt="Click icon" class="h-8" />
+            </a>
+          </router-link>
 
-          <a class="flex items-center justify-between bg-brand-green rounded-full py-1.5 px-8 font-light text-2xl text-white w-[600px] shadow-[1px_2px_3px_1px_rgba(0,0,0,0.3)] leading-7 ">
-            Health-related quality of life<br> (HRQoL) with YUPELRI
-            <img src="../assets/images/click-icon-white.svg" alt="Click icon" class="h-8" />
-          </a>
+          <router-link to="/quality-of-life">
+            <a class="flex items-center justify-between bg-brand-green rounded-full py-1.5 px-8 font-light text-2xl text-white w-[600px] shadow-[1px_2px_3px_1px_rgba(0,0,0,0.3)] leading-7 ">
+              Health-related quality of life<br> (HRQoL) with YUPELRI
+              <img src="../assets/images/click-icon-white.svg" alt="Click icon" class="h-8" />
+            </a>
+          </router-link>
         </div>
 
         <div class="flex justify-center">
