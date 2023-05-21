@@ -22,7 +22,9 @@
       <p class="text-sm text-gray-400">The most common adverse reactions occurring in clinical trials at an incidence greater than or equal to 2% in the YUPELRI group, and higher than placebo, included cough, nasopharyngitis, upper respiratory infection, headache and back pain.</p>
       <p class="text-sm text-gray-400">Coadministration of anticholinergic medicines or OATP1B1 and OATP1B3 inhibitors with YUPELRI is not recommended.</p>
       <p class="text-sm text-gray-400">YUPELRI is not recommended in patients with any degree of hepatic impairment. </p>
-      <p class="text-sm text-gray-400">Click here for Full Prescribing Information.</p>
+      <p class="text-sm text-gray-400 font-semibold">
+        Click here for <a href="https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?type=display&setid=6dfebf04-7c90-436a-9b16-750d3c1ee0a6" class="underline">Full Prescribing Information.</a>
+      </p>
     </div>
   </div>
 </template>
