@@ -56,20 +56,58 @@
   </div>
 
   <side-nav>
-    <li class="flex justify-center items-center bg-brand-green border-t border-r border-b border-white h-16 w-16 rounded-r">
+    <li @click="onReferencesClick" @keydown="onReferencesClick" class="flex justify-center items-center bg-brand-green border-t border-r border-b border-white h-16 w-16 rounded-r">
       <img src="../assets/images/information-icon.svg" alt="Information icon" class="h-8">
     </li>
   </side-nav>
+
+  <vue-easy-light-box
+      :imgs="images"
+      :index="0"
+      :move-disabled="true"
+      :pinch-disabled="true"
+      :rotate-disabled="true"
+      :visible="lightboxVisible"
+      :zoom-disabled="true"
+      @hide="onHide"
+    />
 </template>
 
 <script>
+import { defineComponent, ref } from 'vue';
 import SideNav from '@/components/SideMenu.vue';
+import VueEasyLightBox from 'vue-easy-lightbox';
 
-export default {
-  name: 'HomeView',
-
+export default defineComponent({
   components: {
     SideNav,
+    VueEasyLightBox,
   },
-};
+
+  setup() {
+    const lightboxVisible = ref(false);
+    const images = ref([]);
+
+    const onShow = () => {
+      lightboxVisible.value = true;
+    };
+
+    const onHide = () => {
+      lightboxVisible.value = false;
+    };
+
+    const onReferencesClick = () => {
+      images.value = 'references.png';
+      onShow();
+    };
+
+    return {
+      images,
+      lightboxVisible,
+      onHide,
+      onReferencesClick,
+      onShow,
+    };
+  },
+});
 </script>

@@ -63,7 +63,7 @@
       </div>
 
       <router-link to="/24-hour-efficacy-data">
-        <svg class="absolute left-[70px] top-[507px] text-[#cde3f1] h-[66px] w-auto z-50" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg class="absolute left-[60px] top-[507px] text-[#cde3f1] h-[66px] w-auto z-50" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
         </svg>
       </router-link>
@@ -79,13 +79,17 @@
   </div>
 
   <side-nav>
+    <li @click="onMenuClick" @keydown="onMenuClick" class="flex justify-center items-center bg-brand-green border-t border-r border-b border-white h-16 w-16 rounded-r">
+      <img src="../assets/images/list-icon.svg" alt="List icon" class="h-8">
+    </li>
+
     <router-link to="/">
-      <li class="flex justify-center items-center bg-brand-green border-t border-r border-b border-white h-16 w-16 rounded-r">
+      <li class="flex justify-center items-center bg-brand-green border-t border-r border-b border-white h-16 w-16 rounded-r my-3">
         <img src="../assets/images/home-icon.svg" alt="Home icon" class="h-8">
       </li>
     </router-link>
 
-    <li class="flex justify-center items-center bg-brand-green border-t border-r border-b border-white h-16 w-16 rounded-r">
+    <li @click="onReferencesClick" @keydown="onReferencesClick" class="flex justify-center items-center bg-brand-green border-t border-r border-b border-white h-16 w-16 rounded-r">
       <img src="../assets/images/information-icon.svg" alt="Information icon" class="h-8">
     </li>
   </side-nav>
@@ -101,6 +105,47 @@
       @hide="onHide"
     />
 
+    <div
+    v-show="menuVisible"
+    class="absolute left-[75px] top-[107px] bg-gradient-to-tr from-[#b897c1] to-white to-60% pl-16"
+  >
+    <ol class="">
+      <li class="pr-16 py-4 text-brand-blue text-lg border-b border-white w-96 relative">
+        <router-link to="/24-hour-efficacy-data">
+          YUPELRI 24-hour efficacy data
+          <img src="../assets/images/click-icon.svg" alt="Click icon" class="h-8 absolute right-[15px] top-[12px]" />
+        </router-link>
+      </li>
+
+      <li class="pr-16 py-4 text-brand-blue text-lg border-b border-white w-96 relative">
+        <router-link to="/12-week-efficacy-data">
+          YUPELRI 12-week efficacy data
+          <img src="../assets/images/click-icon.svg" alt="Click icon" class="h-8 absolute right-[15px] top-[12px]" />
+        </router-link>
+      </li>
+
+      <li class="pr-16 py-4 text-brand-blue text-lg border-b border-white w-96 relative">
+        <router-link to="/concomitant-use">
+          YUPELRI efficacy data in concomitant use with other treatments
+          <img src="../assets/images/click-icon.svg" alt="Click icon" class="h-8 absolute right-[15px] top-[28px]" />
+        </router-link>
+      </li>
+
+      <li class="pr-16 py-4 text-brand-blue text-lg border-b border-white w-96 relative">
+        <router-link to="/quality-of-life">
+          Health-related quality of life (HRQoL) with YUPELRI
+          <img src="../assets/images/click-icon.svg" alt="Click icon" class="h-8 absolute right-[15px] top-[28px]" />
+        </router-link>
+      </li>
+
+      <li class="pr-16 py-4 text-brand-blue text-lg w-96 relative">
+        <router-link to="/safety-profile">
+          The safety profile of YUPELRI in 3 clinical studies
+          <img src="../assets/images/click-icon.svg" alt="Click icon" class="h-8 absolute right-[15px] top-[28px]" />
+        </router-link>
+      </li>
+    </ol>
+  </div>
 </template>
 
 <script>
@@ -120,6 +165,7 @@ export default defineComponent({
 
   setup() {
     const lightboxVisible = ref(false);
+    const menuVisible = ref(false);
     const images = ref([]);
 
     const onShow = () => {
@@ -135,11 +181,23 @@ export default defineComponent({
       onShow();
     };
 
+    const onMenuClick = () => {
+      menuVisible.value = !menuVisible.value;
+    };
+
+    const onReferencesClick = () => {
+      images.value = 'references.png';
+      onShow();
+    };
+
     return {
-      lightboxVisible,
       images,
+      lightboxVisible,
+      menuVisible,
       onGraphClick,
       onHide,
+      onMenuClick,
+      onReferencesClick,
       onShow,
     };
   },

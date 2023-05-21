@@ -11,3 +11,7 @@ export default {
   name: 'SideMenu',
 };
 </script>
+
+<style>
+ol a { margin: 1rem 0; }
+</style>
