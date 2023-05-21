@@ -1,4 +1,4 @@
-# yupelri
+# yupelri-slideshow
 
 ## Project setup
 ```
