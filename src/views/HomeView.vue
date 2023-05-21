@@ -12,10 +12,12 @@
 
       <div class="flex flex-col px-36 w-full">
         <div class="flex justify-center space-x-20">
-          <a class="flex items-center justify-between bg-brand-green rounded-full py-6 px-8 font-light text-2xl text-white w-[600px] shadow-[1px_2px_3px_1px_rgba(0,0,0,0.3)]">
-            YUPELRI 24-hour efficacy data
-            <img src="../assets/images/click-icon-white.svg" alt="Click icon" class="h-8" />
-          </a>
+          <router-link to="/24-hour-efficacy-data">
+            <a class="flex items-center justify-between bg-brand-green rounded-full py-6 px-8 font-light text-2xl text-white w-[600px] shadow-[1px_2px_3px_1px_rgba(0,0,0,0.3)]">
+              YUPELRI 24-hour efficacy data
+              <img src="../assets/images/click-icon-white.svg" alt="Click icon" class="h-8" />
+            </a>
+          </router-link>
 
           <a class="flex items-center justify-between bg-brand-green rounded-full py-6 px-8 font-light text-2xl text-white w-[600px] shadow-[1px_2px_3px_1px_rgba(0,0,0,0.3)]">
             YUPELRI 12-week efficacy data
@@ -29,7 +31,7 @@
             <img src="../assets/images/click-icon-white.svg" alt="Click icon" class="h-8" />
           </a>
 
-          <a class="flex items-center justify-between bg-brand-green rounded-full py-1.5 px-8 font-light text-2xl text-white w-[600px] shadow-[1px_2px_3px_1px_rgba(0,0,0,0.3)] leading-7">
+          <a class="flex items-center justify-between bg-brand-green rounded-full py-1.5 px-8 font-light text-2xl text-white w-[600px] shadow-[1px_2px_3px_1px_rgba(0,0,0,0.3)] leading-7 ">
             Health-related quality of life<br> (HRQoL) with YUPELRI
             <img src="../assets/images/click-icon-white.svg" alt="Click icon" class="h-8" />
           </a>
@@ -44,10 +46,22 @@
       </div>
     </div>
   </div>
+
+  <side-nav>
+    <li class="flex justify-center items-center bg-brand-green border-t border-r border-b border-white h-16 w-16 rounded-r">
+      <img src="../assets/images/information-icon.svg" alt="Information icon" class="h-8">
+    </li>
+  </side-nav>
 </template>
 
 <script>
+import SideNav from '@/components/SideMenu.vue';
+
 export default {
   name: 'HomeView',
+
+  components: {
+    SideNav,
+  },
 };
 </script>
